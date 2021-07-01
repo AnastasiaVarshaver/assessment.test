@@ -24,7 +24,6 @@ export class nngGroupCheckbox {
 
     public async Click (){
         await browser.actions().click(this.nngGroupCheckbox.checkbox).perform();
-        await browser.sleep(2000);
         await this.nngGroupCheckbox.checkbox.isSelected();
     }
 
