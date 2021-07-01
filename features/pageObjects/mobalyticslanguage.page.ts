@@ -17,20 +17,17 @@ export class mobalyticsLanguageRU {
     public async LanguagePopup (){
         await browser.wait(ExpectedConditions.visibilityOf(await this.mobalyticsLanguageRU.languageIcon), defaultTimeout, "Icon didn't load or has incorrect locator");
         await browser.actions().click(this.mobalyticsLanguageRU.languageIcon).perform();
-        await browser.sleep(2000);
     }
 
 
     public async Select (){
         await browser.wait(ExpectedConditions.visibilityOf(await this.mobalyticsLanguageRU.languageRussian), defaultTimeout, "Russian language option has incorrect locator");
         await browser.actions().click(this.mobalyticsLanguageRU.languageRussian).perform();
-        await browser.sleep(2000);
     }
 
     public async Save (){
         await browser.wait(ExpectedConditions.visibilityOf(await this.mobalyticsLanguageRU.languageSave), defaultTimeout, "Save button has incorrect locator");
         await browser.actions().click(this.mobalyticsLanguageRU.languageSave).perform();
-        await browser.sleep(2000);
     }
     public async Result (){
         await browser.wait(ExpectedConditions.visibilityOf(await this.mobalyticsLanguageRU.languagePage), defaultTimeout, "Page language didn't change");
