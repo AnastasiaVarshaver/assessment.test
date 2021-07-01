@@ -21,18 +21,15 @@ export class mobalyticsHasagi {
 
     public async Click (){
         await browser.actions().click(this.mobalyticsHasagi.dropdownlist).perform();
-        await browser.sleep(2000);
     }
 
     public async SelectTFT (){
         await browser.wait(ExpectedConditions.visibilityOf(await this.mobalyticsHasagi.teamfighttactics), defaultTimeout, "TFT DDL option has incorrect locator");
         await browser.actions().click(this.mobalyticsHasagi.teamfighttactics).perform();
-        await browser.sleep(2000);
     }
     public async SelectBuildPage (){
         await browser.wait(ExpectedConditions.visibilityOf(await this.mobalyticsHasagi.teamfighttacticsHasagiBuild), defaultTimeout, "Chosen build didn't load on the list or has incorrect locator");
         await browser.actions().click(this.mobalyticsHasagi.teamfighttactics).perform();
-        await browser.sleep(2000);
     }
     public async BuildPage (){
         await browser.wait(ExpectedConditions.visibilityOf(await this.mobalyticsHasagi.teamfighttacticsHasagiPage), defaultTimeout, "Page didn't load or has incorrect locator");
