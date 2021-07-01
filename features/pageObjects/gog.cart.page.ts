@@ -17,13 +17,11 @@ export class gogCart {
     public async SelectGame (){
         await browser.wait(ExpectedConditions.visibilityOf(await this.gogCart.gameBanner), defaultTimeout, "Game banner didn't load or has incorrect locator");
         await browser.actions().click(this.gogCart.gameBanner).perform();
-        await browser.sleep(2000);
     }
 
     public async AddToCart(){
         await browser.wait(ExpectedConditions.presenceOf(await this.gogCart.cartButton), defaultTimeout, "Game have not been added");
         await browser.actions().click(this.gogCart.gameBanner).perform();
-        await browser.sleep(2000);
     }
 
     public async ButtonChange (){
