@@ -21,7 +21,6 @@ export class tftBuildInfo {
     public async Expand (){
         await browser.wait(ExpectedConditions.visibilityOf(await this.tftBuildInfo.buildExpandArrow), defaultTimeout, "Expand arrow button has incorrect locator");
         await browser.actions().click(this.tftBuildInfo.buildExpandArrow).perform();
-        await browser.sleep(2000);
     }
     public async Result (){
         await browser.wait(ExpectedConditions.visibilityOf(await this.tftBuildInfo.buildExpandWindow), defaultTimeout, "Page didn't load or has incorrect locator");
