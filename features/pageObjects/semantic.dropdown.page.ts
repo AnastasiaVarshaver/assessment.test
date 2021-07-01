@@ -22,7 +22,6 @@ export class semanticDDL {
 
     public async Click (){
         await browser.actions().click(this.semanticDDL.dropdown).perform();
-        await browser.sleep(2000);
     }
 
     public async PickFemale (){
