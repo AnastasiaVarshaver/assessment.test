@@ -23,7 +23,6 @@ export class gogSearch {
     public async SearchField (){
         await browser.wait(ExpectedConditions.visibilityOf(await this.gogSearch.searchField), defaultTimeout, "Search field didn't load or has incorrect locator");
         await this.gogSearch.searchField.sendKeys('Bioshock');
-        await browser.sleep(3000);
     }
     public async GameResults (){
         await browser.wait(ExpectedConditions.visibilityOf(await this.gogSearch.searchResult), defaultTimeout, "Results didn't load");
