@@ -21,13 +21,11 @@ export class mobalyticsDDL {
 
     public async Click (){
         await browser.actions().click(this.mobalyticsDDL.dropdownlist).perform();
-        await browser.sleep(2000);
     }
 
     public async Select (){
         await browser.wait(ExpectedConditions.visibilityOf(await this.mobalyticsDDL.teamfighttactics), defaultTimeout, "TFT DDL option has incorrect locator");
         await browser.actions().click(this.mobalyticsDDL.teamfighttactics).perform();
-        await browser.sleep(2000);
     }
     public async Result (){
         await browser.wait(ExpectedConditions.visibilityOf(await this.mobalyticsDDL.teamfighttacticsPageName), defaultTimeout, "Page didn't load or has incorrect locator");
