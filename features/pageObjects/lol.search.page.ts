@@ -21,7 +21,6 @@ export class mobalyticsSearch {
 
     public async Search (){
         await this.mobalyticsSearch.searchField.sendKeys('Diana');
-        await browser.sleep(3000);
     }
     public async HeroPage (){
         await browser.wait(ExpectedConditions.visibilityOf(await this.mobalyticsSearch.heroBuild), defaultTimeout, "Page didn't load");
