@@ -17,7 +17,6 @@ export class mobalyticsTOS {
     public async TOSButton (){
         await browser.wait(ExpectedConditions.visibilityOf(await this.mobalyticsTOS.mobalyticsTOSButton), defaultTimeout, "Icon didn't load or has incorrect locator");
         await browser.actions().mouseMove(this.mobalyticsTOS.mobalyticsTOSButton).perform();
-        await browser.sleep(2000);
     }
 
 
@@ -28,7 +27,6 @@ export class mobalyticsTOS {
 
     public async ButtonClick (){
         await browser.actions().click(this.mobalyticsTOS.mobalyticsTOSButton).perform();
-        await browser.sleep(2000);
     }
 
     public async TOSRedirection (){
