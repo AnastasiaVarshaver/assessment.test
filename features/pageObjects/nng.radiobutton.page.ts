@@ -22,7 +22,6 @@ export class nngGroupRadiobutton {
 
     public async Click (){
         await browser.actions().click(this.nngGroupRadiobutton.radiobutton).perform();
-        await browser.sleep(2000);
         await this.nngGroupRadiobutton.radiobutton.isSelected();
     }
 
