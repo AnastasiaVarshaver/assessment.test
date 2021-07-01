@@ -21,7 +21,6 @@ export class mobalyticsHover {
 
     public async Hover (){
         await browser.actions().mouseMove(this.mobalyticsHover.dropdownlist).perform();
-        await browser.sleep(2000);
     }
 
     public async HoverHighlighted (){
