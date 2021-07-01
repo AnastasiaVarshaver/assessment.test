@@ -17,7 +17,6 @@ export class tftFiltersRefresh {
     public async SelectSFilter (){
         await browser.wait(ExpectedConditions.visibilityOf(await this.tftFiltersRefresh.filterS), defaultTimeout, "Filter for S tiers didn't load or has incorrect locator");
         await browser.actions().click(this.tftFiltersRefresh.filterS).perform();
-        await browser.sleep(2000);
         await browser.wait(ExpectedConditions.visibilityOf(await this.tftFiltersRefresh.resultsforFilter), defaultTimeout, "Results for selected filter didn't load");
     }
 
@@ -25,7 +24,6 @@ export class tftFiltersRefresh {
     public async RefreshAllFilters (){
         await browser.wait(ExpectedConditions.visibilityOf(await this.tftFiltersRefresh.refreshFilersButton), defaultTimeout, "Clear button didn't load or has incorrect locator");
         await browser.actions().click(this.tftFiltersRefresh.refreshFilersButton).perform();
-        await browser.sleep(2000);
     }
 
     public async FiltersRefreshed (){
