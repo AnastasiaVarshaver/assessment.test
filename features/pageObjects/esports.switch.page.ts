@@ -17,7 +17,6 @@ export class esportsSwitch {
     public async SwitchOff (){
         await browser.wait(ExpectedConditions.visibilityOf(await this.esportsSwitch.switchModeOff), defaultTimeout, "Switch didn't load or has incorrect locator");
         await browser.actions().click(this.esportsSwitch.switchModeOff).perform();
-        await browser.sleep(2000);
     }
 
     public async SwitchOn (){
