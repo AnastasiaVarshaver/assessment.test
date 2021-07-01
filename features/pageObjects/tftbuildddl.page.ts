@@ -17,13 +17,11 @@ export class tftDDL {
     public async Dropdownlist (){
         await browser.wait(ExpectedConditions.visibilityOf(await this.tftDDL.dropdownlist), defaultTimeout, "Drop-down list didn't load or has incorrect locator");
         await browser.actions().click(this.tftDDL.dropdownlist).perform();
-        await browser.sleep(2000);
     }
 
     public async Select (){
         await browser.wait(ExpectedConditions.visibilityOf(await this.tftDDL.dropdownlistDawnbringers), defaultTimeout, "TFT DDL option has incorrect locator");
         await browser.actions().click(this.tftDDL.dropdownlistDawnbringers).perform();
-        await browser.sleep(2000);
     }
     public async Result (){
         await browser.wait(ExpectedConditions.visibilityOf(await this.tftDDL.dropdownlistDawnbringers2), defaultTimeout, "Page didn't load or has incorrect locator");
